@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@700&display=swap');
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Padauk', sans-serif;
+    list-style: none;
+    z-index: 0;
+    
+}
+a{
+    text-decoration: none;
+}
+body
+{
+    background-image: url(onlineshopping.jpg);
+    background-size: cover;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+::-webkit-scrollbar
+{
+    width: 10px;
+    
+}
+::-webkit-scrollbar-track
+{
+    border-radius: 5px;
+    box-shadow: inset 1px 0px 0px rgba(216, 211, 211, 0.548);
+
+}
+::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    background-color: #464646;
+}
+.navigation
+{
+   width: 100%;
+    display: flex;
+    padding: 10px;
+    margin: 20px;
+    position: relative;
+
+}
+.navigation ul{
+    margin-left:40%;
+
+}
+.navigation .logo
+{
+    display: flex;
+}
+.navigation .logo h1 
+{
+    font-size: 2.1rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Lobster', cursive;
+    margin-left: 5px;
+}
+.navigation .logo img
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.navigation ul li
+{
+    display: inline-block;
+    padding: 25px;
+    
+}
+.navigation ul a::before
+{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: rgb(12, 12, 12);
+    position: absolute;
+    top: 100%;
+}
+.navigation ul a:hover::before
+{
+  width: 100%;
+  transition: 2s;
+}
+.navigation ul li a
+{
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    font-weight: 900;
+    position: relative;
+}
+.navigation ul li a:hover
+{
+    color: rgb(56, 54, 66);
+    
+}
+.container
+{
+    width: 500px;
+    position: relative;
+    left: 47%;
+    top: 3vw;
+    margin: 50px;
+   
+}
+.container .title h1{
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    font-family: Berlin Sans FB;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+.container .title h3{
+    margin: 6px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-family: Berlin Sans FB;
+    color: rgb(27, 27, 27);
+    letter-spacing:6px;
+    font-weight: 500;
+}
+.container .title p{
+    width: 450px;
+    margin: 6px;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: rgb(59, 59, 59);
+    font-family: Bahnschrift;
+}
+.container .title button{
+    background-color: #da8898;
+    border-radius: 40px;
+    width: 200PX;
+    height: 50PX;
+    margin: 6px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    border:1px solid white;
+    cursor: pointer;
+}
+.container .title button:hover
+{
+    color: rgb(99, 99, 99);
+    transition: 0.2s;
+}
+.socail-app 
+{
+  position: relative;
+  left: 78%;
+  top: 11vw;
+}
+.socail-app a{
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    text-align: center;
+    
+   
+}
+.socail-app i
+{
+    background-color: rgb(230, 162, 220);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, 0.788);
+    padding: 7px;
+    
+}
+.socail-app a:hover
+{
+    color: rgb(34, 64, 230);
+}

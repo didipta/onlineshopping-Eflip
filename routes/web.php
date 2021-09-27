@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\firstcontrollerpage;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+
+Route::get('/Signinpage', [firstcontrollerpage::class, 'signin'])->name('/signinpage');
+Route::post('/Dashboard', [firstcontrollerpage::class, 'loginform'])->name('/Dashboard');
