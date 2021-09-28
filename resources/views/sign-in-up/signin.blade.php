@@ -21,7 +21,7 @@
                 <p>Are you new to this website? Do you like what we 
                     offer ? you should totally join our website and experience
                     community.</p>
-                <a href="Registertion.html"><button class="btn">Register....</button></a>
+                <a href="{{route('/signuppage')}}"><button class="btn">Register....</button></a>
             </div>
             
         </div>
@@ -35,23 +35,23 @@
                   {{csrf_field()}}
                     <div class="input-field">
                         <i class="fa fa-user-o" aria-hidden="true"></i>
-                        <input type="text" name="uname" id="uname" placeholder="user id"/>
+                        <input type="text" name="uname" id="uname" value="{{old('uname')}}" placeholder="user id"/>
                         
                     </div>
                     @error('uname')
-                      <span style="color: rgb(224, 53, 90); margin-left:15px; font-size:0.8rem;">{{$message}}</span>
+                      <span class="error" >{{$message}}</span>
                     @enderror
                    
                     
                     <div class="input-field">
                         <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-                        <input type="password" name="password" id="password" placeholder="password"/>
+                        <input type="password" name="password" id="password" value="{{old('password')}}" placeholder="password"/>
         
                        <div class="eye" onclick=" password() "><i class="fa fa-eye" aria-hidden="true" id="eye" ></i></div> 
         
                     </div>
                     @error('password')
-                      <span style="color: rgb(224, 53, 90); margin-left:15px; font-size:0.8rem;">{{$message}}</span><br>
+                      <span class="error" >{{$message}}</span><br>
                     @enderror
                     
                     <a href="#" style="margin-left: 10px; font-size: 0.9rem; color: rgb(110, 110, 110);">Forgotten password?</a><br>
