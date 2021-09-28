@@ -39,7 +39,7 @@
                         
                     </div>
                     @error('uname')
-                      <span style="color: rgb(224, 53, 53); margin-left:15px;">{{$message}}</span>
+                      <span style="color: rgb(224, 53, 90); margin-left:15px; font-size:0.8rem;">{{$message}}</span>
                     @enderror
                    
                     
@@ -51,7 +51,7 @@
         
                     </div>
                     @error('password')
-                      <span style="color: rgb(224, 53, 53); margin-left:15px;">{{$message}}</span><br>
+                      <span style="color: rgb(224, 53, 90); margin-left:15px; font-size:0.8rem;">{{$message}}</span><br>
                     @enderror
                     
                     <a href="#" style="margin-left: 10px; font-size: 0.9rem; color: rgb(110, 110, 110);">Forgotten password?</a><br>
