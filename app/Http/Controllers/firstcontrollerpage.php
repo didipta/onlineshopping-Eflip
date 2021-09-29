@@ -60,7 +60,7 @@ class firstcontrollerpage extends Controller
        [
            'Firstname.required'=>'Please put your Firstname',
            'Firstname.regex'=>'Please put Only letter',
-           'LastName.required'=>'Please put your Firstname',
+           'LastName.required'=>'Please put your Lastname',
            'LastName.regex'=>'Please put Only letter',
            'phone.required'=>'Please put your Phone number',
            'phone.numeric'=>'Please put Number',
@@ -71,7 +71,7 @@ class firstcontrollerpage extends Controller
            'email.required'=>'Please put your Email',
            'password.min'=>'Please least 8 or more characters',
            'password.regex'=>'number,uppercase,lowercase letter must',
-           'email.required'=>'Please put your Email',
+           'password.required'=>'Please put 8 special character password',
            'cpassword.same'=>'confirm Password not match',
            
 
