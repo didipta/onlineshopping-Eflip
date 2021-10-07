@@ -128,7 +128,20 @@
 
     </div>
 
-
+    <div class="message" style="display: {{$confirm}};">
+      <div class="icon">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+      </div>
+      <div class="title">
+        <h3>Your Registertion is Successfully receive </h3>
+      <p>User-Name: <span style="color: rgb(213, 43, 255); font-weight: 900;">{{$username}}</span> </p>
+      </div>
+      <div class="btnok">
+        <a href="{{route('/signuppage')}}" style=" color: rgb(255, 255, 255);">Ok</a>
+      </div>
+      
+     
+    </div>
 
     <script src="js/registertion.js"></script>     
 </body>

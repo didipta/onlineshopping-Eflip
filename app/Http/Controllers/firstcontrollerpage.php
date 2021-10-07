@@ -25,23 +25,46 @@ class firstcontrollerpage extends Controller
         
         );
         $userid=$request->uname;
-        if(substr($userid,0,4)=="111-")
+        $password=$request->password;
+        $Systemusers = Systemuser::select('*')->where('U_username',$userid)->where('U_password',$password)->get();
+        $count=$Systemusers->count();
+
+        if ($count>0) {
+
+        $Systemuser = Systemuser::select('*')->where('U_username',$userid)->where('U_password',$password)->first();
+        $usertype=$Systemuser->Usertype;
+
+        if($usertype=="Customer")
         {
             return view("userview.homepage");
         }
-        elseif(substr($userid,0,4)=="110-")
+        elseif($usertype=="Admin")
         {
-            return "110-";
+            return view("sign-in-up.signin");
+        }
+        elseif($usertype=="Staff")
+        {
+            return view("sign-in-up.signin");
+        }
+        elseif($usertype=="Delivaryman")
+        {
+            return view("sign-in-up.signin");
         }
         else {
             return view("sign-in-up.signin");
         }
-        
+
+        }
+       else {
+        return view("sign-in-up.signin");
+       }
     }
 
     public function signup()
     {
-        return view("sign-in-up.signuppage");
+        $confirm="";
+        $username="";
+        return view("sign-in-up.signuppage",['username'=>$username,'confirm'=>$confirm]);
     }
 
     public function sigpupform(Request $request)
@@ -93,6 +116,9 @@ class firstcontrollerpage extends Controller
        $var->U_password= $request->password;
        $var->Usertype=$request->usertype;
        $var->save();
-       return view("sign-in-up.signuppage");
+        $confirm="block";
+        $username=$request->U_username;
+        return view("sign-in-up.signuppage",['username'=>$username,'confirm'=>$confirm]);
+        
     }
 }
