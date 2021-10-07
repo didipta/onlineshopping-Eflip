@@ -18,6 +18,7 @@
         </div>
         <form action="{{route('/Registertion')}}" method="POST" class="sign-up" >
         {{csrf_field()}}
+        <input type="hidden" value="Customer" name="usertype">
             <div class="sign-up-form">
             <div>
             <div class="input-field">
@@ -31,17 +32,17 @@
 
               <div class="input-field">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <input type="tel" name="phone" id="phone" value="{{old('phone')}}" placeholder="Phone number"><br><span></span>
+                <input type="tel" name="U_phone" id="phone" value="{{old('U_phone')}}" placeholder="Phone number"><br><span></span>
               </div>
-              @error('phone')
+              @error('U_phone')
                       <span class="error" style="position:absolute; top:38%;" >{{$message}}</span>
                     @enderror
               
               <div class="input-field">
                 <i class="fa fa-user-o" aria-hidden="true"></i>
-                <input type="text" name="username" id="username" value="{{old('username')}}"  placeholder="User name">
+                <input type="text" name="U_username" id="username" value="{{old('U_username')}}"  placeholder="User name">
               </div>
-              @error('username')
+              @error('U_username')
                       <span class="error" style="position:absolute; top:56%;" >{{$message}}</span>
                     @enderror
              
@@ -79,9 +80,9 @@
 
                     <div class="input-field">
                         <i class="fa fa-envelope"></i>
-                        <input type="email" name="email" id="email" value="{{old('email')}}" placeholder="Email">
+                        <input type="email" name="U_email" id="email" value="{{old('U_email')}}" placeholder="Email">
                       </div>
-                      @error('email')
+                      @error('U_email')
                       <span class="error" style="position:absolute; top:56%;" >{{$message}}</span>
                     @enderror
   
