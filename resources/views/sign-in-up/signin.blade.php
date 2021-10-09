@@ -35,7 +35,7 @@
                   {{csrf_field()}}
                     <div class="input-field">
                         <i class="fa fa-user-o" aria-hidden="true"></i>
-                        <input type="text" name="uname" id="uname" value="{{old('uname')}}" placeholder="user id"/>
+                        <input type="text" name="uname" id="uname" value="{{old('uname')}}" placeholder="user name"/>
                         
                     </div>
                     @error('uname')

@@ -18,7 +18,7 @@
             <p><i class="fa fa-envelope-o" aria-hidden="true"></i> diptacompani12@gmail.com</p>
         </div>
         <div class="logout-name">
-            <p>@diptasaha</p>
+            <p>@<span>{{$username}}</span></p>
            <a href="{{route('/signinpage')}}"> <p>Logout</p></a>
             <p><i class="fa fa-bell-o" aria-hidden="true"></i><sup class="notification">12</sup>
             </p>

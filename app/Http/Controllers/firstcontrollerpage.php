@@ -33,10 +33,11 @@ class firstcontrollerpage extends Controller
 
         $Systemuser = Systemuser::select('*')->where('U_username',$userid)->where('U_password',$password)->first();
         $usertype=$Systemuser->Usertype;
+        $user_name=$Systemuser->U_username;
 
         if($usertype=="Customer")
         {
-            return view("userview.homepage");
+            return view("userview.homepage",['username'=>$user_name]);
         }
         elseif($usertype=="Admin")
         {
