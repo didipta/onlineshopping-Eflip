@@ -19,7 +19,7 @@ class firstcontrollerpage extends Controller
              'password'=>'required'
         ],
         [
-            'uname.required'=>'Please put your user id',
+            'uname.required'=>'Please put your user name',
             'password.required'=>'Please put your password'
         ]
         
@@ -29,8 +29,8 @@ class firstcontrollerpage extends Controller
         $Systemusers = Systemuser::select('*')->where('U_username',$userid)->where('U_password',$password)->get();
         $count=$Systemusers->count();
 
-        if ($count>0) {
 
+        if ($count>0) {
         $Systemuser = Systemuser::select('*')->where('U_username',$userid)->where('U_password',$password)->first();
         $usertype=$Systemuser->Usertype;
         $user_name=$Systemuser->U_username;
