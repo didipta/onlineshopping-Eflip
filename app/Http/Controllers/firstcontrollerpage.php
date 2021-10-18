@@ -122,4 +122,19 @@ class firstcontrollerpage extends Controller
         return view("sign-in-up.signuppage",['username'=>$username,'confirm'=>$confirm]);
         
     }
+
+
+    public function profile()
+    {
+        $username="";
+        return view("userview.profile",['username'=>$username]);
+    }
+
+    public function Homepage(Request $request)
+    {
+
+        $username="";
+        return view("userview.homepage",['username'=>$username]);
+
+    }
 }

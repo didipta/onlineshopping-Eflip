@@ -1,184 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <title>online shopping </title>
-
-</head>
-<body>
-
-
-    <div class="header">
-        <div class="call-mail">
-            <p><i class="fa fa-phone" aria-hidden="true"></i> 01919170323</p>
-            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> diptacompani12@gmail.com</p>
-        </div>
-        <div class="logout-name">
-            <p>@<span>{{$username}}</span></p>
-           <a href="{{route('/signinpage')}}"> <p>Logout</p></a>
-            <p><i class="fa fa-bell-o" aria-hidden="true"></i><sup class="notification">12</sup>
-            </p>
-        </div>
-        
-    </div>
-    <header>
-    <div class="search-logo-prfile">
-        <div class="logo">
-            <img src="img/logo.png" alt="">
-            <h1><span style="color: rgb(250, 3, 229); font-family: 'Lobster', cursive;">E</span>flip</h1>
-        </div>
-        <div class="search-box">
-            <form method="POST">
-                
-                <input type="text" placeholder="Search for.....">
-                <button><i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-            </form>
-        </div>
-        <div class="profile">
-            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-            <i class="fa fa-comment-o" aria-hidden="true"></i>
-            <i class="fa fa-user-o" aria-hidden="true"></i>
-        </div>
-    </div>
-
-
-    <div class="navigation">
-        <div class="CATAGORIES">
-            <p>
-            <i class="fa fa-bars" aria-hidden="true"></i>
-            <p>CATAGORIES</p>
-            <span style="margin-left : 30px;"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-        </p>
-        </div>
-        <div class="nav">
-            <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">CATALOG</a></li>
-                <li><a href="">BLOG</a></li>
-                <li><a href="">SHOP</a></li>
-                <li><a href="">TOP10</a></li>
-            </ul>
-        </div>
-        <div class="nav-2">
-        <ul>
-            <li><a href="">ADOUT</a></li>
-            <li><a href="">NEWS FEED</a></li>
-            <li><a href="">HELP</a></li>
-            </div>
-        </ul>
-    </div>
-
-</header>
+@extends("userview.layout")
+@section("content")
+@include('userview.navigation.menunav')
 <div class="contant">
 
-    <div class="CATAGORIES-nav">
-        <li><a href=""> Laptops <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Desktops <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Watchs <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Motor Bikes <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Smart Phones <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Smart & Android Tvs <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Speakers <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Headphones <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Refrigerators <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Split Ac <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Men Fashion <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href=""> Women Fashion <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-
-    </div>
-
+    
+@include('userview.navigation.leftsidenav')
     
     
   <div>
-    <div class="img-slider">
-        <div class="slider active">
-            <img src="https://images.hdqwalls.com/wallpapers/bike-black-and-white-pic.jpg" alt="">
-            <div class="info">
-                <h2></h2>
-                <p></p>
-            </div>
-
-        </div>
-        <div class="slider">
-            <img src="img/slider-8..jpeg" alt="">
-            <div class="info">
-                <h2></h2>
-                <p></p>
-            </div>
-
-        </div>
-
-        <div class="slider">
-            <img src="https://i.pinimg.com/originals/f7/22/ea/f722eabe02a33184b7e57db807d1edda.jpg" alt="">
-            <div class="info">
-                <h2></h2>
-                <p></p>
-            </div>
-
-        </div>
-
-        <div class="slider">
-            <img src="img/slider-10.jpeg" alt="">
-            <div class="info">
-                <h2></h2>
-                <p></p>
-            </div>
-
-        </div>
-        <div class="nav">
-            <div class="btn active"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-        </div>
-
-       
-        </div>
-        <div class="offer">
-            <div class="b-kash">
-                <img src="img/Image 25.jpg" alt="">
-
-                <div class="offer-info">
-                  <img src="img/bkash.svg" alt="">
-                  <p>PAY WITH bkash & GET ADDITIONAL</p>
-                  <h3>10% INSTANT CASHBACK</h3>
-                </div>
-                
-            </div>
-            <div class="hot-del">
-              <img src="img/Image 26.jpg" alt="">
-              <div class="offer-info">
-                <h4>HOT DEALS</h4>
-                <p>IF YOU BUY A PRODUCT YOU CAN OFFERS.</p>
-                <h3>UP TO 50% OFF!!</h3>
-              </div>
-                
-            </div>
-            </div>
-    </div>
- 
     
+  @include('userview.otherview.imgslider')
 </div>
-<div class="CATAGORIES-nav c-nav-2">
-    <li><a href=""> Laptops </a></li>
-    <li><a href=""> Desktops </a></li>
-    <li><a href=""> Watchs </a></li>
-    <li><a href=""> Motor Bikes </a></li>
-    <li><a href=""> Smart Phones</a></li>
-    <li><a href=""> Smart & Android Tvs</a></li>
-    <li><a href=""> Speakers </a></li>
-    <li><a href=""> Headphones </a></li>
-    <li><a href=""> Refrigerators </a></li>
-    <li><a href=""> Split Ac </a></li>
-    <li><a href=""> Men Fashion </i></span></a></li>
-    <li><a href=""> Women Fashion</a></li>
 
-</div>
+
+@include('userview.navigation.leftsidenav2')
 
 <div class="best_selles">
     <h2>BEST SELLERS</h2>
@@ -465,56 +300,7 @@
 </div>
 
 
-<div class="footer">
-    <div class="address">
-        <h2>Contact Us</h2>
-     
-        <p><i class="fa fa-map-marker" aria-hidden="true"></i>
-          Road-18,Nikonjo-2,khilkhet,Dhaka,Bangladesh.<br>
-          <i class="fa fa-phone" aria-hidden="true"></i>
-          phone-01881401818<br>
-          <i class="fa fa-clock-o" aria-hidden="true"></i> Anyday - 10AM To 10PM<br>
-        <i class="fa fa-envelope-o" aria-hidden="true"></i> diptacompani12@gmail.com
-      </p>
-    </div>
-
-    <div class="footer-menu">
-        <h2>MENU</h2>
-      
-        <li><a href="">HOME</a></li>
-        <li><a href="">CATALOG</a></li>
-        <li><a href="">BLOG</a></li>
-        <li><a href="">SHOP</a></li>
-        <li><a href="">TOP10</a></li>
-        <li><a href="">ADOUT</a></li>
-        <li><a href="">NEWS FEED</a></li>
-        <li><a href="">HELP</a></li>
-    </div>
-    <div class="footer-CATAGORIES">
-        <h2>CATAGORIES</h2>
-        <li><a href=""> Laptops </a></li>
-        <li><a href=""> Watchs </a></li>
-        <li><a href=""> Smart Phones</a></li>
-        <li><a href=""> Speakers </a></li>
-        <li><a href=""> Headphones </a></li>
-        <li><a href=""> Refrigerators </a></li>
-        <li><a href=""> Men Fashion </i></span></a></li>
-        <li><a href=""> Women Fashion</a></li>
-    </div>
-
-    <div class="socail-app">
-        <h2>SOCIAL MEDIA APPS</h2>
-        <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="https://mail.google.com/mail/u/0/?tab=rm#inbox?compose=new"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="https://www.whatsapp.com/"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-    </div>
-</div>
-
-
-
-
-    <script src="js/slider.js"></script>
-    
-</body>
-</html>
+@endsection
+@section("title")
+Online Shopping | Home
+@endsection
