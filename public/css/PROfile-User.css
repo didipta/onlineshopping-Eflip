@@ -37,7 +37,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    box-shadow: 5px 5px 10px 5px rgba(141, 141, 141, 0.548);
+    box-shadow: 1px 1px 5px 1px rgba(141, 141, 141, 0.548);
 }
 #profile-info .file-style input
 {

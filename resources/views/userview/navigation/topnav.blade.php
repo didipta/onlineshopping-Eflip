@@ -4,8 +4,8 @@
             <p><i class="fa fa-envelope-o" aria-hidden="true"></i> diptacompani12@gmail.com</p>
         </div>
         <div class="logout-name">
-            <p><a href="{{route('/profile')}}">@<span>{{$username}}</span></a></p>
-           <a href="{{route('/signinpage')}}"> <p>Logout</p></a>
+            <p><a href="/profile/{{$Systemuser->id}}">@<span>{{$Systemuser->U_username}}</span></a></p>
+           <a href="{{route('/logout')}}"> <p>Logout</p></a>
             <p><i class="fa fa-bell-o" aria-hidden="true"></i><sup class="notification">12</sup>
             </p>
         </div>

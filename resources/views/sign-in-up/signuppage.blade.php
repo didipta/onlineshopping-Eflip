@@ -143,6 +143,6 @@
      
     </div>
 
-    <script src="js/registertion.js"></script>     
+    <script src="/js/registertion.js"></script>     
 </body>
 </html>

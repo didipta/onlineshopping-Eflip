@@ -8,7 +8,7 @@
 
         </div>
         <div class="slider">
-            <img src="img/slider-8..jpeg" alt="">
+            <img src="/img/slider-8..jpeg" alt="">
             <div class="info">
                 <h2></h2>
                 <p></p>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="slider">
-            <img src="img/slider-10.jpeg" alt="">
+            <img src="/img/slider-10.jpeg" alt="">
             <div class="info">
                 <h2></h2>
                 <p></p>
@@ -44,17 +44,17 @@
         </div>
         <div class="offer">
             <div class="b-kash">
-                <img src="img/Image 25.jpg" alt="">
+                <img src="/img/Image 25.jpg" alt="">
 
                 <div class="offer-info">
-                  <img src="img/bkash.svg" alt="">
+                  <img src="/img/bkash.svg" alt="">
                   <p>PAY WITH bkash & GET ADDITIONAL</p>
                   <h3>10% INSTANT CASHBACK</h3>
                 </div>
                 
             </div>
             <div class="hot-del">
-              <img src="img/Image 26.jpg" alt="">
+              <img src="/img/Image 26.jpg" alt="">
               <div class="offer-info">
                 <h4>HOT DEALS</h4>
                 <p>IF YOU BUY A PRODUCT YOU CAN OFFERS.</p>

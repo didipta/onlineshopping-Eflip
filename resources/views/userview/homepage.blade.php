@@ -20,45 +20,45 @@
     <p>MOSTLY  BOUGHT</p>
     <div class="iteam-slider">
         <div class="best-item">
-            <img src="img/Image 28.png" alt="">
+            <img src="/img/Image 28.png" alt="">
             <h3>Headphone </h3>
             <p>ATH-ANC700BT</p>
             <h2>৳-4,000</h2>
         </div>
 
         <div class="best-item">
-            <img src="img/Image 29.png" alt="">
+            <img src="/img/Image 29.png" alt="">
             <h3>Gaming Laptop </h3>
             <p>Dell G7 15-7590</p>
             <h2>৳-1,88,000</h2>
         </div>
 
         <div class="best-item">
-            <img src="img/Image 30.png" alt="">
+            <img src="/img/Image 30.png" alt="">
             <h3>Refrigerator  </h3>
             <p> Samsung  RS74R5101SL</p>
             <h2>৳-1,99,900</h2>
         </div>
         <div class="best-item">
-            <img src="img/Image 31.png" alt="">
+            <img src="/img/Image 31.png" alt="">
             <h3>Smart Phone </h3>
             <p>iphone 12 pro max</p>
             <h2>৳1,61,999</h2>
         </div>
         <div class="best-item">
-            <img src="img/Image 32.png" alt="">
+            <img src="/img/Image 32.png" alt="">
             <h3>Man's Watch</h3>
             <p>Rolex-116503WDO</p>
             <h2>৳14,056,182</h2>
         </div>
         <div class="best-item">
-            <img src="img/Image 33.png" alt="">
+            <img src="/img/Image 33.png" alt="">
             <h3>Android Tv </h3>
             <p>TCL 50P615</p>
             <h2>৳140,182</h2>
         </div>
         <div class="best-item">
-            <img src="img/Image 34.jpg" alt="">
+            <img src="/img/Image 34.jpg" alt="">
             <h3>Motorcycle </h3>
             <p>Triumph Rocket III</p>
             <h2>৳-314,000</h2>
@@ -71,45 +71,45 @@
     <p>MOSTLY  BOUGHT</p>
     <div class="iteam-slider">
         <div class="best-item">
-            <img src="img/Image 28.png" alt="">
+            <img src="/img/Image 28.png" alt="">
             <h3>Headphone </h3>
             <p>ATH-ANC700BT</p>
             <h2>৳-4,000</h2>
         </div>
 
         <div class="best-item">
-            <img src="img/Image 29.png" alt="">
+            <img src="/img/Image 29.png" alt="">
             <h3>Gaming Laptop </h3>
             <p>Dell G7 15-7590</p>
             <h2>৳-1,88,000</h2>
         </div>
 
         <div class="best-item">
-            <img src="img/Image 30.png" alt="">
+            <img src="/img/Image 30.png" alt="">
             <h3>Refrigerator  </h3>
             <p> Samsung  RS74R5101SL</p>
             <h2>৳-1,99,900</h2>
         </div>
         <div class="best-item">
-            <img src="img/Image 31.png" alt="">
+            <img src="/img/Image 31.png" alt="">
             <h3>Smart Phone </h3>
             <p>iphone 12 pro max</p>
             <h2>৳1,61,999</h2>
         </div>
         <div class="best-item">
-            <img src="img/Image 32.png" alt="">
+            <img src="/img/Image 32.png" alt="">
             <h3>Man's Watch</h3>
             <p>Rolex-116503WDO</p>
             <h2>৳14,056,182</h2>
         </div>
         <div class="best-item">
-            <img src="img/Image 33.png" alt="">
+            <img src="/img/Image 33.png" alt="">
             <h3>Android Tv </h3>
             <p>TCL 50P615</p>
             <h2>৳140,182</h2>
         </div>
         <div class="best-item">
-            <img src="img/Image 34.jpg" alt="">
+            <img src="/img/Image 34.jpg" alt="">
             <h3>Motorcycle </h3>
             <p>Triumph Rocket III</p>
             <h2>৳-314,000</h2>
@@ -135,7 +135,7 @@
         </div>
 
         <div class="best-item">
-            <img src="https://www.techbick.com/wp-content/uploads/2019/11/elegant-white-background-with-shiny-lines_1017-17580-1-min-2.jpg" alt="">
+            <img src="/img/Image 30.png" alt="">
             <h3>Refrigerator  </h3>
             <p> Samsung  RS74R5101SL</p>
             <h2>৳-1,99,900</h2>

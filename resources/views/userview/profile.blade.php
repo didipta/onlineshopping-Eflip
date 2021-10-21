@@ -3,7 +3,7 @@
 
 <div class="profile">
 <div class="top-head">
-    <p style=" margin-left:20px ;"> <a href="{{route('/Dashboardh')}}">Home</a>/ <a href="#" style="color:black;">Profile</a> </p>
+    <p style=" margin-left:20px ;"> <a href="/Dashboardh/{{$Systemuser->id}}">Home</a>/ <a href="#" style="color:black;">Profile</a> </p>
 </div>
 <section>
     <section id="profile-info">
@@ -12,42 +12,49 @@
               
           <div class="img">
 
-            <img src="img/pro.png" alt="" id="blah">
+            <img src="/img/pro.png" alt="" id="blah">
 
             <label for="imgfile" class="Add-file"><i type="file" class="fa fa-plus" aria-hidden="true"></i></label>
             <div class="file-style"> <input type="file" name="imgfile" id="imgfile" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" ></div>
         </div>
      </form>
 
-        <form action="" method="Post" class="profile-form">
+        <form action="{{route('/profileEdite')}}" method="Post" class="profile-form">
+        
+        {{csrf_field()}}
+        <input type="hidden" name="id"  value="{{$Systemuser->id}}">
             <fieldset>
                 <legend><p>Username</p></legend> 
                 <div class="input-file">
-                    <input type="text" id="username" value="" name="username" placeholder="username" pattern="[A-Za-z\s]+" title="Only letter support"><br>
+                    <input type="text" id="name" value="{{$Systemuser->U_Name}}" name="name" placeholder="username" ><br>
                 </div>
                 
             </fieldset>
-
+            @error('name')
+                      <span class="error" style="position:absolute; top:74%;" >{{$message}}</span>
+                    @enderror
             <fieldset>
                 <legend><p>Address</p></legend> 
                 <div class="input-file">
-                    <input type="text" id="username" value="" name="address" placeholder="Address" required="" ><br>
+                    <input type="text" id="address" value="{{$Systemuser->U_address}}" name="address" placeholder="Address" ><br>
                 </div>
                 
             </fieldset>
-
+            @error('address')
+                      <span class="error" style="position:absolute; top:74%;" >{{$message}}</span>
+                    @enderror
             <fieldset>
                 <legend><p>Email</p></legend> 
                 <div class="input-file">
-                    <input type="text" id="username" value="" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Wrong email format"><br>
+                    <input type="text" id="U_email" value="{{$Systemuser->U_email}}" name="U_email" placeholder="Email" readonly><br>
                 </div>
                 
             </fieldset>
 
             <fieldset>
-                <legend><p>User Id</p></legend> 
+                <legend><p>User Name</p></legend> 
                 <div class="input-file">
-                    <input type="text" id="username" value="" name="useid" placeholder="User Id" readonly><br>
+                    <input type="text" id="U_username" value="{{$Systemuser->U_username}}" name="U_username" placeholder="User Id" readonly><br>
                 </div>
                 
             </fieldset>
@@ -55,7 +62,7 @@
             <fieldset>
                 <legend><p>Phone Number</p></legend> 
                 <div class="input-file">
-                    <input type="text" id="username" value="" name="phone" placeholder="Phone Number"  pattern="[0-9]{11}" title="Wrong phone number"><br>
+                    <input type="text" id="U_phone" value="{{$Systemuser->U_phone}}" name="U_phone" placeholder="Phone Number"  readonly><br>
                 </div>
                
             </fieldset>
@@ -74,24 +81,25 @@
                 PASSWORD
             </h1>
         </div>
-        <form action="" method="Post" class="Changepassword">
-
+        <form action="{{route('/Changepassword')}}" method="Post" class="Changepassword">
+        {{csrf_field()}}
+        <input type="hidden" name="id"  value="{{$Systemuser->id}}">
            
                 <div class="input-file-cp" >
-                    <input type="password" id="password"  name="thispass" placeholder="Current password"><br>
-                    <div class="eye eyes" onclick=" myFunction() " style=" position:absolute; left:35vw; top:7.5vw;  cursor: pointer;"><i class="fa fa-eye" aria-hidden="true" ></i></div> 
+                    <input type="password" id="password"  name="thispassword" placeholder="Current password"><br>
+                    <div class="eye eyes" onclick=" password() " style=" position:absolute; left:35vw; top:7.5vw;  cursor: pointer;"><i class="fa fa-eye" aria-hidden="true" ></i></div> 
                 </div>
                
           
                 <div class="input-file-cp">
-                    <input type="password" id="cpassword" name="newpass" placeholder="New password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase 
-                        and lowercase letter, and at least 8 or more characters">
-              <div class="eye eyes" onclick=" myFunction() " style=" position:absolute; left:35vw; top:12vw;  cursor: pointer;"><i class="fa fa-eye" aria-hidden="true" ></i></div> 
+                    <input type="password" id="cpassword" name="newpassword" placeholder="New password" >
+              <div class="eye eyes" onclick=" cpassword() " style=" position:absolute; left:35vw; top:12vw;  cursor: pointer;"><i class="fa fa-eye" aria-hidden="true" ></i></div> 
                 </div>
-
+                @error('newpassword')
+                      <span class="error" style="position:absolute; top:74%;" >{{$message}}</span>
+                    @enderror
                 <button class="btn">
-                    Save
-                    </button>
+                    Save </button>
                
          <p>  </p>
 

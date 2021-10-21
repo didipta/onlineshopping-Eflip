@@ -7,59 +7,12 @@ use Illuminate\Http\Request;
 
 class firstcontrollerpage extends Controller
 {
+    
     public function signin()
     {
         return view("sign-in-up.signin");
     }
-    public function loginform(Request $request)
-    {
-        $validate=$request->validate([
-
-             'uname'=>'required',
-             'password'=>'required'
-        ],
-        [
-            'uname.required'=>'Please put your user name',
-            'password.required'=>'Please put your password'
-        ]
-        
-        );
-        $userid=$request->uname;
-        $password=$request->password;
-        $Systemusers = Systemuser::select('*')->where('U_username',$userid)->where('U_password',$password)->get();
-        $count=$Systemusers->count();
-
-
-        if ($count>0) {
-        $Systemuser = Systemuser::select('*')->where('U_username',$userid)->where('U_password',$password)->first();
-        $usertype=$Systemuser->Usertype;
-        $user_name=$Systemuser->U_username;
-
-        if($usertype=="Customer")
-        {
-            return view("userview.homepage",['username'=>$user_name]);
-        }
-        elseif($usertype=="Admin")
-        {
-            return view("sign-in-up.signin");
-        }
-        elseif($usertype=="Staff")
-        {
-            return view("sign-in-up.signin");
-        }
-        elseif($usertype=="Delivaryman")
-        {
-            return view("sign-in-up.signin");
-        }
-        else {
-            return view("sign-in-up.signin");
-        }
-
-        }
-       else {
-        return view("sign-in-up.signin");
-       }
-    }
+    
 
     public function signup()
     {
@@ -83,7 +36,7 @@ class firstcontrollerpage extends Controller
             
        ],
        [
-           'Firstname.required'=>'Please put your Firstname',
+           'Firstname.required'=>'Please put your First name',
            'Firstname.regex'=>'Please put Only letter',
            'LastName.required'=>'Please put your Lastname',
            'LastName.regex'=>'Please put Only letter',
@@ -109,7 +62,7 @@ class firstcontrollerpage extends Controller
        
        );
        $var = new Systemuser();
-       $var->U_Name= $request->Firstname." ".$request->LastName;
+       $var->U_Name= $request->name." ".$request->LastName;
        $var->U_phone= $request->U_phone;
        $var->U_address= $request->address;
        $var->U_username= $request->U_username;
@@ -124,17 +77,22 @@ class firstcontrollerpage extends Controller
     }
 
 
-    public function profile()
-    {
-        $username="";
-        return view("userview.profile",['username'=>$username]);
+    public function profile(Request $request)
+    {   
+        
+        $id = $request->id;
+        $Systemuser = Systemuser::where('id',$id)->first();
+        return view("userview.profile",['Systemuser'=>$Systemuser]);
     }
 
     public function Homepage(Request $request)
     {
 
-        $username="";
-        return view("userview.homepage",['username'=>$username]);
+        $id = $request->id;
+        $Systemuser = Systemuser::where('id',$id)->first();
+        return view("userview.homepage",['Systemuser'=>$Systemuser]);
 
     }
+
+    
 }

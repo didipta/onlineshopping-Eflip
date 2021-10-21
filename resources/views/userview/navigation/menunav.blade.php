@@ -1,7 +1,7 @@
 <header>
     <div class="search-logo-prfile">
         <div class="logo">
-            <img src="img/logo.png" alt="">
+            <img src="/img/logo.png" alt="">
             <h1><span style="color: rgb(250, 3, 229); font-family: 'Lobster', cursive;">E</span>flip</h1>
         </div>
         <div class="search-box">
@@ -15,7 +15,7 @@
         <div class="profile">
             <i class="fa fa-cart-plus" aria-hidden="true"></i>
             <i class="fa fa-comment-o" aria-hidden="true"></i>
-            <i class="fa fa-user-o" aria-hidden="true"></i>
+            <a href="/profile/{{$Systemuser->id}}">  <i class="fa fa-user-o" aria-hidden="true"></i></a>
         </div>
     </div>
 
