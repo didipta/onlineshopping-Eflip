@@ -62,14 +62,17 @@ class firstcontrollerpage extends Controller
        
        );
        $var = new Systemuser();
-       $var->U_Name= $request->name." ".$request->LastName;
+       $var->U_Name= $request->Firstname." ".$request->LastName;
        $var->U_phone= $request->U_phone;
        $var->U_address= $request->address;
        $var->U_username= $request->U_username;
        $var->U_email= $request->U_email;
        $var->U_password= $request->password;
        $var->Usertype=$request->usertype;
+       $var->U_profileimg=$request->profileimg;
        $var->save();
+       
+
         $confirm="block";
         $username=$request->U_username;
         return view("sign-in-up.signuppage",['username'=>$username,'confirm'=>$confirm]);
@@ -77,21 +80,31 @@ class firstcontrollerpage extends Controller
     }
 
 
-    public function profile(Request $request)
+    public function profile()
     {   
         
-        $id = $request->id;
-        $Systemuser = Systemuser::where('id',$id)->first();
+        
+        $usernames=session('username');
+        $Systemuser = Systemuser::where('U_username',$usernames)->first();
         return view("userview.profile",['Systemuser'=>$Systemuser]);
     }
 
     public function Homepage(Request $request)
     {
 
-        $id = $request->id;
-        $Systemuser = Systemuser::where('id',$id)->first();
+        $usernames=session('username');
+        $Systemuser = Systemuser::where('U_username',$usernames)->first();
         return view("userview.homepage",['Systemuser'=>$Systemuser]);
 
+    }
+
+    public function signupimg()
+    {
+
+        $Systemuser = Systemuser::where('U_username',$use_id)->first();
+        $confirm="";
+        $username="";
+        return view("sign-in-up.signuppage",['username'=>$username,'confirm'=>$confirm]);
     }
 
     

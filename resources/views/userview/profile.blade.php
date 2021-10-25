@@ -3,19 +3,16 @@
 
 <div class="profile">
 <div class="top-head">
-    <p style=" margin-left:20px ;"> <a href="/Dashboardh/{{$Systemuser->id}}">Home</a>/ <a href="#" style="color:black;">Profile</a> </p>
+    <p style=" margin-left:20px ;"> <a href="{{route('/Dashboardp')}}">Home</a>/ <a href="#" style="color:black;">Profile</a> </p>
 </div>
 <section>
     <section id="profile-info">
-
-        <form action="#" method="Post" class="profile-form" enctype="multipart/form-data">
               
           <div class="img">
 
-            <img src="/img/pro.png" alt="" id="blah">
+            <img src="/img/{{$Systemuser->U_profileimg}}" alt="" >
 
-            <label for="imgfile" class="Add-file"><i type="file" class="fa fa-plus" aria-hidden="true"></i></label>
-            <div class="file-style"> <input type="file" name="imgfile" id="imgfile" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" ></div>
+            <label class="Add-file" onclick="myFunction()"><i class="fa fa-camera" aria-hidden="true"></i></i></label>
         </div>
      </form>
 
@@ -104,7 +101,29 @@
          <p>  </p>
 
         </form>
+
+
+
+       
     </section>
+
+    <div id="profileimg">
+       <div onclick="myFunction2()"> <i class="fa fa-times" aria-hidden="true" ></i></div>
+
+        <form action="{{route('/profileimg')}}" method="Post" class="profile-form" enctype="multipart/form-data">
+            {{csrf_field()}}
+            <input type="hidden" name="id"  value="{{$Systemuser->id}}">
+            <div class="img">
+  
+              <img src="/img/pro.png" alt="" id="blah">
+  
+              <label for="imgfile" class="Add-file"><i type="file" class="fa fa-plus" aria-hidden="true"></i></label>
+              <div class="file-style"> <input type="file" name="imgfile" id="imgfile" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" ></div>
+             <br> <button class="btn">Save </button>
+          </div>
+       </form>
+
+    </div>
 </div>
 
 @endsection

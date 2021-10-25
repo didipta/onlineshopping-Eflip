@@ -25,6 +25,7 @@
 
 
     <script src="/js/slider.js"></script>
-    <script src="/js/registertion.js"></script>     
+    <script src="/js/registertion.js"></script>  
+    <script src="/js/design.js"></script>    
 </body>
 </html>

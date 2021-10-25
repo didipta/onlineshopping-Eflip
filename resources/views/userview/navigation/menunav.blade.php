@@ -15,7 +15,7 @@
         <div class="profile">
             <i class="fa fa-cart-plus" aria-hidden="true"></i>
             <i class="fa fa-comment-o" aria-hidden="true"></i>
-            <a href="/profile/{{$Systemuser->id}}">  <i class="fa fa-user-o" aria-hidden="true"></i></a>
+            <a href="{{route('/profile')}}">  <i class="fa fa-user-o" aria-hidden="true"></i></a>
         </div>
     </div>
 

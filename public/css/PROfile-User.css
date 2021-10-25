@@ -60,6 +60,7 @@
   border-radius: 50%;
   box-shadow: 1px 1px 1px 1px rgba(134, 134, 134, 0.548);
   text-align: center;
+  cursor: pointer;
 }
 #profile-info fieldset
 {
@@ -167,4 +168,58 @@
   {
       font-size: 1rem;
   }
-  
+  #profileimg
+  {
+     
+      box-shadow: 1px 1px 5px 1px rgba(141, 141, 141, 0.548);
+      display:none;
+      width: 500px;
+      position: absolute;
+      top: 6vw;
+      left: 35%;
+      background-color: rgb(255, 255, 255);
+     
+  }
+
+  #profileimg i{
+     
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #profileimg i:hover
+  {
+      color: rgb(253, 44, 44);
+  }
+#profileimg .img{
+    margin-left: 150px;
+}
+#profileimg .img img
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px 1px rgba(141, 141, 141, 0.548);
+}
+#profileimg .file-style input
+{
+    background-color: #161616;
+    display: none;
+    visibility: none;
+   
+}
+
+#profileimg .Add-file i
+{
+  width: 30px;
+  height: 30px;
+  font-size: 1.3rem;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px 1px rgba(134, 134, 134, 0.548);
+  text-align: center;
+  cursor: pointer;
+}

@@ -51,8 +51,22 @@ class profileedite extends Controller
         session()->forget('username');
         return view("sign-in-up.signin");
        }
-       
+       else {
+        $usernames=session('username');
+        $Systemuser = Systemuser::where('U_username',$usernames)->first();
+        return view("userview.profile",['Systemuser'=>$Systemuser]);
+       }
         
 
+    }
+
+    public function profileimg(Request $request)
+    {
+        $Systemuser =Systemuser::where('id',$request->id)->first();
+        $Systemuser->U_profileimg=$request->file('imgfile')->getClientOriginalName();
+        $Systemuser->save();
+        $usernames=session('username');
+        $Systemuser = Systemuser::where('U_username',$usernames)->first();
+        return view("userview.profile",['Systemuser'=>$Systemuser]);
     }
 }

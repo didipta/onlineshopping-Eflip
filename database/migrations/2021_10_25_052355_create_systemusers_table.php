@@ -22,6 +22,7 @@ class CreateSystemusersTable extends Migration
             $table->string('U_email',50)->unique();
             $table->string('U_password',20);
             $table->string('Usertype',30);
+            $table->string('U_profileimg',250);
             $table->timestamps();
         });
     }

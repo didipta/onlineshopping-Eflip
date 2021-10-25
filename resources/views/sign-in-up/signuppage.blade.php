@@ -19,6 +19,7 @@
         <form action="{{route('/Registertion')}}" method="POST" class="sign-up" >
         {{csrf_field()}}
         <input type="hidden" value="Customer" name="usertype">
+        <input type="hidden" value="pro.png" name="profileimg">
             <div class="sign-up-form">
             <div>
             <div class="input-field">

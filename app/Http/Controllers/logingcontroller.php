@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 
 class logingcontroller extends Controller
 {
+    
     public function loginform(Request $request)
     {
+        
         $validate=$request->validate([
 
              'uname'=>'required',
@@ -24,15 +26,17 @@ class logingcontroller extends Controller
         $password=$request->password;
         $Systemusers = Systemuser::select('*')->where('U_username',$userid)->where('U_password',$password)->get();
         $count=$Systemusers->count();
-
+        
 
         if ($count>0) {
         $Systemuser = Systemuser::select('*')->where('U_username',$userid)->where('U_password',$password)->first();
         $usertype=$Systemuser->Usertype;
         $user_name=$Systemuser->U_username;
+        
 
         if($usertype=="Customer")
-        {
+        {   
+            
             $request->session()->put('username', $user_name);
             return view("userview.homepage",['Systemuser'=>$Systemuser]);
         }
@@ -58,7 +62,8 @@ class logingcontroller extends Controller
        }
     }
     public function hopmepage(){
-        $Systemuser="";
+        $usernames=session('username');
+        $Systemuser = Systemuser::where('U_username',$usernames)->first();
         return view("userview.homepage",['Systemuser'=>$Systemuser]);
     }
 

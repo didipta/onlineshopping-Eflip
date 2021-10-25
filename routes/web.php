@@ -24,10 +24,11 @@ Route::get('/Signinpage', [firstcontrollerpage::class, 'signin'])->name('/signin
 Route::get('/logout', [logingcontroller::class, 'logout'])->name('/logout');
 Route::get('/Signuppage', [firstcontrollerpage::class, 'signup'])->name('/signuppage');
 Route::post('/Dashboard', [logingcontroller::class, 'loginform'])->name('/Dashboard');
-Route::get('/Dashboard', [logingcontroller::class, 'hopmepage'])->name('/Dashboard')->middleware('pageValidation');
-Route::get('/Dashboardh/{id}', [firstcontrollerpage::class, 'Homepage'])->middleware('pageValidation');
+Route::get('/Dashboard', [logingcontroller::class, 'hopmepage'])->middleware('pageValidation');
+Route::get('/Dashboard', [firstcontrollerpage::class, 'Homepage'])->name('/Dashboardp')->middleware('pageValidation');
 Route::post('/Registertion', [firstcontrollerpage::class, 'sigpupform'])->name('/Registertion');
-Route::get('/profile/{id}', [firstcontrollerpage::class, 'profile'])->middleware('pageValidation');
+Route::get('/profile', [firstcontrollerpage::class, 'profile'])->name('/profile')->middleware('pageValidation');
 Route::post('/profileEdite', [profileedite::class,'profileEdite'])->name('/profileEdite');
 Route::post('/Changepassword', [profileedite::class,'Changepassword'])->name('/Changepassword');
+Route::post('/profileimg', [profileedite::class,'profileimg'])->name('/profileimg');
 
