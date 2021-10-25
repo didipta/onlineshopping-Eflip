@@ -25,7 +25,7 @@ class profileedite extends Controller
        $Systemuser->U_Name= $request->name;
        $Systemuser->U_address= $request->address;
        $Systemuser->save();
-       return view("userview.profile",['Systemuser'=>$Systemuser]);
+       return redirect()->route('/profile');
     }
 
     public function Changepassword(Request $request)
@@ -52,9 +52,7 @@ class profileedite extends Controller
         return view("sign-in-up.signin");
        }
        else {
-        $usernames=session('username');
-        $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.profile",['Systemuser'=>$Systemuser]);
+        return redirect()->route('/profile');
        }
         
 
@@ -67,6 +65,6 @@ class profileedite extends Controller
         $Systemuser->save();
         $usernames=session('username');
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.profile",['Systemuser'=>$Systemuser]);
+        return redirect()->route('/profile');
     }
 }
