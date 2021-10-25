@@ -119,7 +119,10 @@
   
               <label for="imgfile" class="Add-file"><i type="file" class="fa fa-plus" aria-hidden="true"></i></label>
               <div class="file-style"> <input type="file" name="imgfile" id="imgfile" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" ></div>
-             <br> <button class="btn">Save </button>
+              @error('imgfile')
+              <span class="error" style="" >{{$message}}</span>
+            @enderror
+              <br> <button class="btn">Save </button>
           </div>
        </form>
 

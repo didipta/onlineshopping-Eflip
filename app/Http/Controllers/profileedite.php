@@ -60,6 +60,19 @@ class profileedite extends Controller
 
     public function profileimg(Request $request)
     {
+        
+        $validate=$request->validate([
+
+            'imgfile'=>'required|image|mimes:jpg,png,jpeg,gif,svg',
+            
+       ],
+       [
+            
+            
+       ]
+       
+       );
+
         $Systemuser =Systemuser::where('id',$request->id)->first();
         $Systemuser->U_profileimg=$request->file('imgfile')->getClientOriginalName();
         $Systemuser->save();

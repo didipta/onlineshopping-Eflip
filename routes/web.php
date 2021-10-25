@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\firstcontrollerpage;
 use App\Http\Controllers\logingcontroller;
 use App\Http\Controllers\profileedite;
+use App\Http\Controllers\pagecontroller;
+use App\Http\Controllers\productlist;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +16,9 @@ use App\Http\Controllers\profileedite;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
+  user Page
+*/
 Route::get('/', function () {
     return view('index');
 });
@@ -31,4 +35,16 @@ Route::get('/profile', [firstcontrollerpage::class, 'profile'])->name('/profile'
 Route::post('/profileEdite', [profileedite::class,'profileEdite'])->name('/profileEdite');
 Route::post('/Changepassword', [profileedite::class,'Changepassword'])->name('/Changepassword');
 Route::post('/profileimg', [profileedite::class,'profileimg'])->name('/profileimg');
+Route::get('/productlist/{id}', [productlist::class,'productlist']);
+
+
+
+
+
+
+/*
+  Admin Page
+*/
+Route::get('/productaddpage', [pagecontroller::class, 'productaddpage'])->name('/productaddpage');
+Route::post('/productadd', [pagecontroller::class, 'productadd'])->name('/productadd');
 

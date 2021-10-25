@@ -42,7 +42,7 @@ class logingcontroller extends Controller
         }
         elseif($usertype=="Admin")
         {
-            return view("sign-in-up.signin");
+            return view("Adminview.home");
         }
         elseif($usertype=="Staff")
         {
