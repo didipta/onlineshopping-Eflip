@@ -232,17 +232,18 @@
 {
     width: 180px;
     height: 220px;
-    margin: 5px;
+    margin: 15px;
     background-color: #4d84e2;
     display:inline-block;
     box-shadow: 1px 1px 1px 1px rgba(156, 156, 156, 0.37);
+    border-radius: 2px;
     cursor: pointer;
     transition: 0.5s;
     padding-top: 10px;
     background-color: rgb(255, 255, 255);
 }
 .items h3 {
-    font-size:1.1rem;
+    font-size:.8rem;
     color: #000;
     font-weight:900;
     margin-bottom: 2px;
@@ -263,8 +264,14 @@
 }
 .items img
 {
-    width: 130px;
+    width: 150px;
     height: 130px;
-    margin-left: 20px;
+    margin-left: 10px;
+    
+}
+.items img:hover
+{
+    transform: scale(1.1);
+	transition:2s transform;
     
 }

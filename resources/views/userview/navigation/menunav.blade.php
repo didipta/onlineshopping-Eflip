@@ -32,7 +32,7 @@
             <ul>
                 <li><a href="">HOME</a></li>
                 <li><a href="">CATALOG</a></li>
-                <li><a href="">BLOG</a></li>
+                <li><a href="">MY ORDERS</a></li>
                 <li><a href="">SHOP</a></li>
                 <li><a href="">TOP10</a></li>
             </ul>

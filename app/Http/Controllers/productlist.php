@@ -14,6 +14,6 @@ class productlist extends Controller
         $product = Product::all()->where('P_categories',$id);
         $usernames=session('username');
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.productlist",['product'=>$product,'Systemuser'=>$Systemuser]);
+        return view("userview.productlist",['product'=>$product,'Systemuser'=>$Systemuser,'categories'=> $id]);
     }
 }
