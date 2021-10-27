@@ -9,7 +9,7 @@
     <li><a href="/productlist/Headphones"> Headphones </a></li>
     <li><a href="/productlist/Refrigerators"> Refrigerators </a></li>
     <li><a href="/productlist/Split Ac"> Split Ac </a></li>
-    <li><a href="/productlist/Men Fashion"> Men Fashion </i></span></a></li>
-    <li><a href="/productlist/Women Fashion"> Women Fashion</a></li>
+    <li><a href="/fashionproductlist/Men Fashion"> Men Fashion </i></span></a></li>
+    <li><a href="/fashionproductlist/Women Fashion"> Women Fashion</a></li>
 
 </div>

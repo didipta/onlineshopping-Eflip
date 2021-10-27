@@ -1,6 +1,6 @@
 .top-head
 {
-    width: 300px;
+    width: 600px;
    position: relative;
    top: 1vw; 
    left: 45%;
@@ -8,7 +8,7 @@
 }
 .top-head a{
     color: rgb(78, 78, 78);
-    font-size: 1.1rem;
+    font-size: 1rem;
    
     
 }
@@ -227,6 +227,7 @@
 {
     margin: 10px;
     margin-top: 50px;
+    padding: 20px;
 }
 .items
 {

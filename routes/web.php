@@ -6,6 +6,7 @@ use App\Http\Controllers\logingcontroller;
 use App\Http\Controllers\profileedite;
 use App\Http\Controllers\pagecontroller;
 use App\Http\Controllers\productlist;
+use App\Http\Controllers\Orderpage;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +37,11 @@ Route::post('/profileEdite', [profileedite::class,'profileEdite'])->name('/profi
 Route::post('/Changepassword', [profileedite::class,'Changepassword'])->name('/Changepassword');
 Route::post('/profileimg', [profileedite::class,'profileimg'])->name('/profileimg');
 Route::get('/productlist/{id}', [productlist::class,'productlist']);
+Route::get('/fashionproductlist/{id}', [productlist::class,'fashionproductlist']);
+Route::get('/fashionaddtocart/{id}', [productlist::class,'fashionaddtocart']);
+Route::get('/addtocarttwo/{id}', [productlist::class,'addtocarttwo']);
+Route::post('/Addtocart', [Orderpage::class,'Addtocart'])->name('/Addtocart');
+Route::post('/Addtocartfashion', [Orderpage::class,'Addtocartfashion'])->name('/Addtocartfashion');
 
 
 
@@ -47,4 +53,6 @@ Route::get('/productlist/{id}', [productlist::class,'productlist']);
 */
 Route::get('/productaddpage', [pagecontroller::class, 'productaddpage'])->name('/productaddpage');
 Route::post('/productadd', [pagecontroller::class, 'productadd'])->name('/productadd');
+
+
 

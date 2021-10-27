@@ -8,7 +8,7 @@
 </div>
 <div class="item-list">
 @foreach($product as $product)
-<a href="/addtocarttwo/{{$product->id}}">
+<a href="/fashionaddtocart/{{$product->id}}">
 <div class="items">
      <img src='/img/{{$product->P_img1}}'>
     <h3>{{$product->P_name}}</h3>
@@ -18,7 +18,6 @@
 </a>
 @endforeach
 </div>
-
 @endsection
 @section("title")
 Online Shopping | {{$categories}}
