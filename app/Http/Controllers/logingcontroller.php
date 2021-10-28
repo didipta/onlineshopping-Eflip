@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Product;
 use App\Models\Systemuser;
+use App\Models\Addtocart;
 
 use Illuminate\Http\Request;
 
@@ -38,7 +40,7 @@ class logingcontroller extends Controller
         {   
             
             $request->session()->put('username', $user_name);
-            return view("userview.homepage",['Systemuser'=>$Systemuser]);
+            return redirect()->route('/Dashboardp');
         }
         elseif($usertype=="Admin")
         {
@@ -62,9 +64,12 @@ class logingcontroller extends Controller
        }
     }
     public function hopmepage(){
+
         $usernames=session('username');
+        $addcart = Addtocart::where('U_username',$usernames)->get();
+         $countcart=$addcart->count();
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.homepage",['Systemuser'=>$Systemuser]);
+        return view("userview.homepage",['Systemuser'=>$Systemuser,'cartproduct'=>$cartproduct]);
     }
 
     public function logout(){

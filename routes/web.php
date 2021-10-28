@@ -7,6 +7,7 @@ use App\Http\Controllers\profileedite;
 use App\Http\Controllers\pagecontroller;
 use App\Http\Controllers\productlist;
 use App\Http\Controllers\Orderpage;
+use App\Http\Controllers\paymentmethod;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,23 +37,30 @@ Route::get('/profile', [firstcontrollerpage::class, 'profile'])->name('/profile'
 Route::post('/profileEdite', [profileedite::class,'profileEdite'])->name('/profileEdite');
 Route::post('/Changepassword', [profileedite::class,'Changepassword'])->name('/Changepassword');
 Route::post('/profileimg', [profileedite::class,'profileimg'])->name('/profileimg');
-Route::get('/productlist/{id}', [productlist::class,'productlist']);
-Route::get('/fashionproductlist/{id}', [productlist::class,'fashionproductlist']);
-Route::get('/fashionaddtocart/{id}', [productlist::class,'fashionaddtocart']);
-Route::get('/addtocarttwo/{id}', [productlist::class,'addtocarttwo']);
+Route::get('/productlist/{id}', [productlist::class,'productlist'])->middleware('pageValidation');;
+Route::get('/fashionproductlist/{id}', [productlist::class,'fashionproductlist'])->middleware('pageValidation');
+Route::get('/fashionaddtocart/{id}', [productlist::class,'fashionaddtocart'])->middleware('pageValidation');
+Route::get('/addtocarttwo/{id}', [productlist::class,'addtocarttwo'])->middleware('pageValidation');;
 Route::post('/Addtocart', [Orderpage::class,'Addtocart'])->name('/Addtocart');
 Route::post('/Addtocartfashion', [Orderpage::class,'Addtocartfashion'])->name('/Addtocartfashion');
-Route::get('/Cartdetails', [Orderpage::class, 'Cartdetails'])->name('/Cartdetails');
+Route::get('/Cartdetails', [Orderpage::class, 'Cartdetails'])->name('/Cartdetails')->middleware('pageValidation');
+Route::get('/cartiteamdelet/{id}', [Orderpage::class, 'cartiteamdelete'])->name('/cartiteamdelet')->middleware('pageValidation');
+
+
+Route::post('/Bkashmethod', [paymentmethod::class, 'Bkashmethod'])->name('/Bkashmethod');
+Route::post('/cartmethod', [paymentmethod::class, 'cartmethod'])->name('/cartmethod');
+Route::post('/cashmethod', [paymentmethod::class, 'cashmethod'])->name('/cashmethod');
 
 
 
-
+Route::get('/Showalloders', [paymentmethod::class, 'Showalloders'])->name('/Showalloders')->middleware('pageValidation');
+Route::get('/Showallodersdetails/{id}', [paymentmethod::class, 'Showallodersdetails'])->name('/Showallodersdetails')->middleware('pageValidation');
 
 
 /*
   Admin Page
 */
-Route::get('/productaddpage', [pagecontroller::class, 'productaddpage'])->name('/productaddpage');
+Route::get('/productaddpage', [pagecontroller::class, 'productaddpage'])->name('/productaddpage')->middleware('pageValidation');
 Route::post('/productadd', [pagecontroller::class, 'productadd'])->name('/productadd');
 
 

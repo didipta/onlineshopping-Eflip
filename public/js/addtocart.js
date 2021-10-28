@@ -29,3 +29,6 @@ $.ajax({
     type:"POST",
     data:cartitem
   });
+
+
+  

@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Product;
 use App\Models\Systemuser;
+use App\Models\Addtocart;
 
 use Illuminate\Http\Request;
 
@@ -93,9 +95,10 @@ class firstcontrollerpage extends Controller
     {
 
         $usernames=session('username');
+        $addcart = Addtocart::where('U_username',$usernames)->get();
+         $countcart=$addcart->count();
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.homepage",['Systemuser'=>$Systemuser]);
-
+        return view("userview.homepage",['Systemuser'=>$Systemuser,'countcart'=>$countcart]);
     }
 
     public function signupimg()

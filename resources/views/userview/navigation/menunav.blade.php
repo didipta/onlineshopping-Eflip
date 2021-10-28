@@ -13,7 +13,7 @@
             </form>
         </div>
         <div class="profile">
-            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            <a href="{{route('/Cartdetails')}}"><i class="fa fa-cart-plus" aria-hidden="true"><sup style="color:red;">{{$countcart}}</sup></i></a>
             <i class="fa fa-comment-o" aria-hidden="true"></i>
             <a href="{{route('/profile')}}">  <i class="fa fa-user-o" aria-hidden="true"></i></a>
         </div>
@@ -32,7 +32,7 @@
             <ul>
                 <li><a href="">HOME</a></li>
                 <li><a href="">CATALOG</a></li>
-                <li><a href="">MY ORDERS</a></li>
+                <li><a href="{{route('/Showalloders')}}">MY ORDERS</a></li>
                 <li><a href="">SHOP</a></li>
                 <li><a href="">TOP10</a></li>
             </ul>

@@ -23,8 +23,6 @@ class CreateMyordersTable extends Migration
             $table->string('Paymanttype',50);
             $table->string('O_status',150);
             $table->timestamps();
-
-            
         });
     }
 

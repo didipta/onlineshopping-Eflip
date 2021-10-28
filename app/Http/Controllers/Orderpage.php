@@ -23,12 +23,7 @@ class Orderpage extends Controller
         $var->P_size="No size";
         $var->U_username=$request->user_name;
         $var->save();
-        $id=$request->id;
-        $product = Product::where('id',$id)->first();;
-        $usernames=session('username');
-        $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.addtocarttwo",['product'=>$product,'Systemuser'=>$Systemuser]);
-        
+        return redirect()->route('/Cartdetails');
        
       
     }
@@ -47,12 +42,7 @@ class Orderpage extends Controller
         $var->P_size=$request->item_size;
         $var->U_username=$request->user_name;
         $var->save();
-        $id=$request->id;
-        $product = Product::where('id',$id)->first();;
-        $usernames=session('username');
-        $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.addtocart",['product'=>$product,'Systemuser'=>$Systemuser]);
-        
+        return redirect()->route('/Cartdetails');
        
       
     }
@@ -65,5 +55,14 @@ class Orderpage extends Controller
         return view("userview.cartdetails",['Systemuser'=>$Systemuser,'cartproduct'=>$cartproduct]);
 
     }
+
+    public function cartiteamdelete(Request $request)
+    {
+       $id=$request->id;
+       $cartproduct = Addtocart::where('id',$id)->first();
+       $cartproduct->delete();
+       return redirect()->route('/Cartdetails');
+    }
+
 
 }

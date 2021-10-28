@@ -49,7 +49,7 @@
                 </div>
                 <div class="item-size" style="  margin-left: 10px;">
                     <h2>Size</h2>
-                    <select name="item_size">
+                    <select name="item_size" required>
                         <option value="" >--Select--</option>
                         <option value="L" id="M" name="L">L</option>
                         <option  value="M" >M</option>

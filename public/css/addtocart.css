@@ -238,7 +238,7 @@
     width: 990px;
     margin-left: 495px;
     padding-left: 30px;
-    background-color: rgb(125, 86, 141);
+    background-color: rgb(27, 27, 27);
 }
 .btnorder
 {
@@ -270,4 +270,100 @@
 {
     text-align: center;
     font-size: 1.5rem;
+}
+#orderconfirm
+{
+    display:none;
+}
+.orderconfirm
+{
+    width: 950px;
+    height: 600px;
+    display:flex;
+    margin: 20px;
+    box-shadow: 1px 1px 5px 1px rgba(75, 74, 74, 0.404);
+    border-radius: 5px;
+    position: fixed;
+    top: 6vh;
+    left: 30vh;
+}
+.orderconfirm .order-title
+{
+    width: 500px;
+    background-color: rgb(240, 238, 238);
+    padding: 20px;
+}
+.orderconfirm .order-title h1 ,.paymant h1
+{
+    font-size: 1.3rem;
+    color: rgb(14, 82, 230);
+    font-weight: 900;
+}
+.orderconfirm .order-title p
+{
+    font-size: 0.9rem;
+    color: rgb(104, 104, 104);
+    font-weight: 900;
+}
+.orderconfirm .order-title h3
+{
+    font-size: 0.9rem;
+    color: rgb(59, 59, 59);
+    font-weight: 900;
+}
+.orderconfirm .order-title li
+{
+   list-style:none;
+   margin: 20px;
+   color: rgb(94, 94, 94);
+   font-weight: 900;
+}
+.paymant
+{
+    width: 500px;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    
+}
+.orderconfirm .payment_type img
+{
+    width: 30px;
+    height: 30px;
+    box-shadow: 1px 1px 1px 1px rgba(75, 74, 74, 0.404);
+    margin: 10px;
+    cursor: pointer;
+   
+
+}
+.orderconfirm .paymant .paymentform
+{
+    width: 400px;
+    box-shadow: 1px 1px 1px 1px rgba(75, 74, 74, 0.404);
+    padding: 10px;
+    margin: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    display:none;
+}
+.orderconfirm .paymant .paymentform h4
+{
+    margin-left: 120px;
+    color: rgb(54, 54, 54);
+}
+.paymentform input
+{
+    width: 300px;
+    height: 30px;
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: .8rem;
+    color: #333;
+    box-shadow: 1px 1px 1px 1px rgba(75, 74, 74, 0.404);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 20px;
 }
