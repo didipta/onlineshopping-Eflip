@@ -3,9 +3,9 @@
 <div class="top-head">
     <p style=" margin-left:20px ;"> <a href="{{route('/Dashboardp')}}">Home</a> / <a href="#" style="color:black;">{{$categories}}</a> </p>
 </div>
-<div class="cart-icon">
+<a href="{{route('/Cartdetails')}}"><div class="cart-icon">
 <i class="fa fa-cart-arrow-down" aria-hidden="true"><sup>{{$countcart}}</sup></i>
-</div>
+</div></a>
 <div class="item-list">
 @foreach($product as $product)
 <a href="/addtocarttwo/{{$product->id}}">

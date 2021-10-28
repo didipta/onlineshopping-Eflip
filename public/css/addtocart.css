@@ -174,3 +174,100 @@
     padding-right: 3px;
     color: rgb(255, 255, 255);
 }
+
+.order_list
+{
+    margin: 20px;
+    padding: 20px;
+    
+}
+.order_details , .totalprice
+{
+    display:flex;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px 1px rgba(75, 74, 74, 0.404);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.order_details:hover
+{
+    background-color: rgb(230, 230, 230);
+}
+.order_details h1{
+    width: 450px;
+    font-size: 1.3rem;
+    margin: 15px;
+    color: rgb(39, 39, 39);
+}
+.order_details p , .totalprice p{
+    width: 100px;
+  margin: 15px;
+  margin-left: 50px;
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(167, 167, 167);
+  font-weight: 900;
+}
+.order_details h3 , .totalprice h3{
+    width: 200px;
+    font-size: 1.2rem;
+    margin: 15px;
+    margin-left: 130px;
+    color: rgb(249, 79, 255);
+    
+}
+.order_details button
+{
+    width: 100px;
+    background-color: #ff009d;
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 15px;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+.totalprice 
+{
+    width: 990px;
+    margin-left: 495px;
+    padding-left: 30px;
+    background-color: rgb(125, 86, 141);
+}
+.btnorder
+{
+    width: 250px;
+    background-color: #ff009d;
+    border: none;
+    outline: none;
+    height: 45px;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+.btnorder:hover
+{
+    color: rgb(182, 182, 182);
+}
+.cartdetails
+{
+    width: 400px;
+    margin: 20px;
+    margin-left: 520px;
+}
+.cartdetails h3
+{
+    text-align: center;
+    font-size: 1.5rem;
+}

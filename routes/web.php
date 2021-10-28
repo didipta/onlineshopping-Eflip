@@ -42,6 +42,7 @@ Route::get('/fashionaddtocart/{id}', [productlist::class,'fashionaddtocart']);
 Route::get('/addtocarttwo/{id}', [productlist::class,'addtocarttwo']);
 Route::post('/Addtocart', [Orderpage::class,'Addtocart'])->name('/Addtocart');
 Route::post('/Addtocartfashion', [Orderpage::class,'Addtocartfashion'])->name('/Addtocartfashion');
+Route::get('/Cartdetails', [Orderpage::class, 'Cartdetails'])->name('/Cartdetails');
 
 
 

@@ -56,4 +56,14 @@ class Orderpage extends Controller
        
       
     }
+
+    public function Cartdetails()
+    {
+        $usernames=session('username');
+        $Systemuser = Systemuser::where('U_username',$usernames)->first();
+        $cartproduct = Addtocart::where('U_username',$usernames)->get();
+        return view("userview.cartdetails",['Systemuser'=>$Systemuser,'cartproduct'=>$cartproduct]);
+
+    }
+
 }
