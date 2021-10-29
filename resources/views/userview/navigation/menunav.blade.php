@@ -13,7 +13,12 @@
             </form>
         </div>
         <div class="profile">
-            <a href="{{route('/Cartdetails')}}"><i class="fa fa-cart-plus" aria-hidden="true"><sup style="color:red;">{{$countcart}}</sup></i></a>
+        @if($countcart==0)
+        <a href="{{route('/Cartdetails')}}"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+        @else
+        <a href="{{route('/Cartdetails')}}"><i class="fa fa-cart-plus" aria-hidden="true"><sup style="color:red;">{{$countcart}}</sup></i></a>
+        @endif
+            
             <i class="fa fa-comment-o" aria-hidden="true"></i>
             <a href="{{route('/profile')}}">  <i class="fa fa-user-o" aria-hidden="true"></i></a>
         </div>

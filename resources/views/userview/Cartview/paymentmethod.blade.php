@@ -3,7 +3,8 @@
         <div class="order-title">
             <h1>Order id-#OrdE{{$orderid}}</h1>
             <p>Total Item- {{$totalQuantity}}</p>
-            <h3>total price- {{$alltotalprice}} tk</h3>
+            <p>Delivery Charge-45 Tk</p>
+            <h3>total price- {{$alltotalprice+45}} tk</h3>
             <hr>
             <p>Item Name:</p>
             @foreach($productname as $value)
@@ -24,7 +25,7 @@
             {{csrf_field()}}
                 <input type="hidden" name="userid" value="{{$Systemuser->id}}">
                 <input type="hidden" name="orderid" value="#OrdE{{$orderid}}">
-                <input type="hidden" name="totaleprice" value="{{$alltotalprice}}">
+                <input type="hidden" name="totaleprice" value="{{$alltotalprice+45}}">
                 <input type="hidden" name="Paymenttype" value="Bkash">
 
                 <h4>Bkash in Payment</h4>
@@ -44,7 +45,7 @@
             {{csrf_field()}}
                 <input type="hidden" name="userid" value="{{$Systemuser->id}}">
                 <input type="hidden" name="orderid" value="#OrdE{{$orderid}}">
-                <input type="hidden" name="totaleprice" value="{{$alltotalprice}}">
+                <input type="hidden" name="totaleprice" value="{{$alltotalprice+45}}">
                 <input type="hidden" name="Paymenttype" value="card">
                 <h4>Cart in Payment</h4>
                 <input type="text" name="formid" id="" placeholder="User Id" ><br>
@@ -64,7 +65,7 @@
             {{csrf_field()}}
                 <input type="hidden" name="userid" value="{{$Systemuser->id}}">
                 <input type="hidden" name="orderid" value="#OrdE{{$orderid}}">
-                <input type="hidden" name="totaleprice" value="{{$alltotalprice}}">
+                <input type="hidden" name="totaleprice" value="{{$alltotalprice+45}}">
                 <input type="hidden" name="Paymenttype" value="Cash">
                 <h4>Cash in Payment</h4>
                 <button class="btnorder">Confirm Order</button>

@@ -5,7 +5,12 @@
     <p style=" margin-left:20px ;"> <a href="{{route('/Dashboardp')}}">Home</a>/<a href="/productlist/{{$product->P_categories}}">{{$product->P_categories}}</a>/<a href="#" style="color:black;">{{$product->P_name}}</a> </p>
 </div>
 <div class="cart-icon">
-<i class="fa fa-cart-arrow-down" aria-hidden="true"><sup>{{$countcart}}</sup></i>
+    @if($countcart==0)
+<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+  @else
+  <i class="fa fa-cart-arrow-down" aria-hidden="true"><sup>{{$countcart}}</sup></i>
+  @endif
+
 </div>
 <form action="{{route('/Addtocart')}}"  method="post">
 {{csrf_field()}}

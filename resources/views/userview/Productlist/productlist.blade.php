@@ -3,12 +3,16 @@
 <div class="top-head">
     <p style=" margin-left:20px ;"> <a href="{{route('/Dashboardp')}}">Home</a> / <a href="#" style="color:black;">{{$categories}}</a> </p>
 </div>
-<div class="cart-icon">
-<i class="fa fa-cart-arrow-down" aria-hidden="true"><sup>{{$countcart}}</sup></i>
-</div>
+<a href="{{route('/Cartdetails')}}"><div class="cart-icon">
+@if($countcart==0)
+<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+  @else
+  <i class="fa fa-cart-arrow-down" aria-hidden="true"><sup>{{$countcart}}</sup></i>
+  @endif
+</div></a>
 <div class="item-list">
 @foreach($product as $product)
-<a href="/fashionaddtocart/{{$product->id}}">
+<a href="/addtocarttwo/{{$product->id}}">
 <div class="items">
      <img src='/img/{{$product->P_img1}}'>
     <h3>{{$product->P_name}}</h3>
@@ -18,6 +22,7 @@
 </a>
 @endforeach
 </div>
+
 @endsection
 @section("title")
 Online Shopping | {{$categories}}

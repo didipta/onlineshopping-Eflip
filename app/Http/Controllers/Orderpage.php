@@ -52,7 +52,7 @@ class Orderpage extends Controller
         $usernames=session('username');
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
         $cartproduct = Addtocart::where('U_username',$usernames)->get();
-        return view("userview.cartdetails",['Systemuser'=>$Systemuser,'cartproduct'=>$cartproduct]);
+        return view("userview.Cartview.cartdetails",['Systemuser'=>$Systemuser,'cartproduct'=>$cartproduct]);
 
     }
 

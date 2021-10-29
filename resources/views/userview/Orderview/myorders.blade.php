@@ -10,8 +10,9 @@
 @foreach($Myorder as $Myorder)
     <div class="order_details">
         <h1>{{$Myorder->O_id}}</h1>
-        <p>Price-{{$Myorder->P_tprice}}</p>
+        <p style=" width: 150px;">Price-{{$Myorder->P_tprice}}</p>
         <p>{{$Myorder->Paymanttype}}</p>
+        <p style=" width: 250px;">{{$Myorder->created_at}}</p>
         <h3 style=" width: 350px;">{{$Myorder->O_status}}</h3>
         <a href="/Showallodersdetails/{{$Myorder->id}}"><button style=" width: 150px;">Order Details</button></a>
     </div>

@@ -17,7 +17,7 @@ class productlist extends Controller
         $addcart = Addtocart::where('U_username',$usernames)->get();
         $countcart=$addcart->count();
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.productlist",['product'=>$product,'Systemuser'=>$Systemuser,'categories'=> $id,'countcart'=>$countcart]);
+        return view("userview.Productlist.productlist",['product'=>$product,'Systemuser'=>$Systemuser,'categories'=> $id,'countcart'=>$countcart]);
     }
     
     public function fashionproductlist(Request $request)
@@ -28,7 +28,7 @@ class productlist extends Controller
         $addcart = Addtocart::where('U_username',$usernames)->get();
         $countcart=$addcart->count();
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.fashionproduct",['product'=>$product,'Systemuser'=>$Systemuser,'categories'=> $id,'countcart'=>$countcart]);
+        return view("userview.Productlist.fashionproduct",['product'=>$product,'Systemuser'=>$Systemuser,'categories'=> $id,'countcart'=>$countcart]);
     }
 //show product
     public function fashionaddtocart(Request $request)
@@ -39,7 +39,7 @@ class productlist extends Controller
         $id=$request->id;
         $product = Product::where('id',$id)->first();;
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.addtocart",['product'=>$product,'Systemuser'=>$Systemuser,'countcart'=>$countcart]);
+        return view("userview.Cartview.addtocart",['product'=>$product,'Systemuser'=>$Systemuser,'countcart'=>$countcart]);
     }
 
     public function addtocarttwo(Request $request)
@@ -50,7 +50,7 @@ class productlist extends Controller
         $id=$request->id;
         $product = Product::where('id',$id)->first();;
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.addtocarttwo",['product'=>$product,'Systemuser'=>$Systemuser,'countcart'=>$countcart]);
+        return view("userview.Cartview.addtocarttwo",['product'=>$product,'Systemuser'=>$Systemuser,'countcart'=>$countcart]);
     }
 }
 

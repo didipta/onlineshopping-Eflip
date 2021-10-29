@@ -150,9 +150,9 @@ class paymentmethod extends Controller
     public function Showalloders()
     {
         $usernames=session('username');
-        $Myorder = Myorder::select('*')->where('U_username',$usernames)->get();
+        $Myorder = Myorder::select('*')->where('U_username',$usernames)->orderBy('created_at')->get();
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
-        return view("userview.myorders",['Systemuser'=>$Systemuser,'Myorder'=>$Myorder]);
+        return view("userview.Orderview.myorders",['Systemuser'=>$Systemuser,'Myorder'=>$Myorder]);
     }
 
     public function Showallodersdetails(Request $request)
@@ -162,7 +162,7 @@ class paymentmethod extends Controller
         $Myorder = Myorder::select('*')->where('id',$id)->first();
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
         $orderdetails=$Myorder->assignedinfo();
-        return view("userview.orderdetails",['Systemuser'=>$Systemuser,'Myorder'=>$Myorder,'orderdetails'=>$orderdetails]);
+        return view("userview.Orderview.orderdetails",['Systemuser'=>$Systemuser,'Myorder'=>$Myorder,'orderdetails'=>$orderdetails]);
     }
     
 

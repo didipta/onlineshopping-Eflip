@@ -46,7 +46,7 @@ $countcart=$cartproduct->count();
     @else
     <h1 style="margin:10px; font-size:1.3rem; text-align:center; ">No Products have been added form add to cart</h1>
     @endif
-    @include('userview.paymentmethod')
+    @include('userview.Cartview.paymentmethod')
     
 @endsection
 @section("title")
