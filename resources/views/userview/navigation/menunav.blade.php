@@ -5,13 +5,17 @@
             <h1><span style="color: rgb(250, 3, 229); font-family: 'Lobster', cursive;">E</span>flip</h1>
         </div>
         <div class="search-box">
-            <form method="POST">
+           
                 
-                <input type="text" placeholder="Search for.....">
+                <input type="text" name="search" placeholder="Search for....." id="search-live">
+                
                 <button><i class="fa fa-search" aria-hidden="true"></i>
+               
                 </button>
-            </form>
+                
+                
         </div>
+        
         <div class="profile">
         @if($countcart==0)
         <a href="{{route('/Cartdetails')}}"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
@@ -50,5 +54,30 @@
             </div>
         </ul>
     </div>
-
+    <table id="result-search" ></table>
 </header>
+
+
+<script type="text/javascript">
+$("#search-live").on('keyup',function(){
+     $value=$(this).val();
+     if($value!="")
+     {
+     $.ajax({
+          url:'{{URL::to("/search")}}',
+          type:"GET",
+          data:{'search':$value},
+          success:function(data)
+          {
+            $('#result-search').html(data);
+          }
+        });
+     }
+     else
+     {
+      $('#result-search').html('');
+     }
+     
+  });
+
+    </script>

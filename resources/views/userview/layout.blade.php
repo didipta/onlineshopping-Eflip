@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="/css/PROfile-User.css">
     <link rel="stylesheet" href="/css/addtocart.css">
     <link rel="stylesheet" href="/css/jquery.nice-number.css">
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
     <title> @yield("title")</title>
 
 </head>
@@ -31,7 +33,6 @@
     <script src="/js/slider.js"></script>
     <script src="/js/registertion.js"></script>  
     <script src="/js/design.js"></script>  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <script src="/js/jquery.nice-number.js"></script> 
     

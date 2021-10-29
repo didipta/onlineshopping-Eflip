@@ -166,4 +166,30 @@ class paymentmethod extends Controller
     }
     
 
+
+    public function search(Request $request)
+    {
+    $output="";
+    $products=Product::where('P_name','LIKE','%'.$request->search."%")->get();
+    if($products)
+    {
+        foreach ($products as $key => $product) {
+            if($product->P_categories=="Men Fashion" || $product->P_categories=="Women Fashion" )
+            {
+                $output.='<tr>'.
+                '<td><a href="/fashionaddtocart/'.$product->id.'">'.$product->P_name.'</a></td>'.
+                '</tr>';
+            }
+            else {
+                $output.='<tr>'.
+                '<td><a href="/addtocarttwo/'.$product->id.'">'.$product->P_name.'</a></td>'.
+                '</tr>';
+            }
+        
+        }
+    return response($output);
+    }
+    }
+
+
 }

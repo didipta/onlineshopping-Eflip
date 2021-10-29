@@ -51,6 +51,7 @@ Route::post('/Bkashmethod', [paymentmethod::class, 'Bkashmethod'])->name('/Bkash
 Route::post('/cartmethod', [paymentmethod::class, 'cartmethod'])->name('/cartmethod');
 Route::post('/cashmethod', [paymentmethod::class, 'cashmethod'])->name('/cashmethod');
 
+Route::get('/search', [paymentmethod::class, 'search'])->name('search');
 
 
 Route::get('/Showalloders', [paymentmethod::class, 'Showalloders'])->name('/Showalloders')->middleware('pageValidation');
