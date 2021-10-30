@@ -150,7 +150,7 @@ class paymentmethod extends Controller
     public function Showalloders()
     {
         $usernames=session('username');
-        $Myorder = Myorder::select('*')->where('U_username',$usernames)->orderBy('created_at')->get();
+        $Myorder = Myorder::select('*')->where('U_username',$usernames)->orderby('id','desc')->get();
         $Systemuser = Systemuser::where('U_username',$usernames)->first();
         return view("userview.Orderview.myorders",['Systemuser'=>$Systemuser,'Myorder'=>$Myorder]);
     }

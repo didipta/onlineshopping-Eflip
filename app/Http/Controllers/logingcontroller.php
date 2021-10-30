@@ -44,6 +44,7 @@ class logingcontroller extends Controller
         }
         elseif($usertype=="Admin")
         {
+            $request->session()->put('username', $user_name);
             return view("Adminview.home");
         }
         elseif($usertype=="Staff")
