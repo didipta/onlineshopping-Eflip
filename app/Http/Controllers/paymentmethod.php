@@ -192,4 +192,12 @@ class paymentmethod extends Controller
     }
 
 
+    public function financial()
+    {
+        $usernames=session('username');
+        $Myorder = Myorder::select('*')->where('U_username',$usernames)->orderby('id','desc')->get();
+        $Systemuser = Systemuser::where('U_username',$usernames)->first();
+        return view("userview.otherview.financial",['Systemuser'=>$Systemuser,'Myorder'=>$Myorder]);
+    }
+
 }

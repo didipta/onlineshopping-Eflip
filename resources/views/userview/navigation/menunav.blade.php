@@ -40,10 +40,9 @@
         <div class="nav">
             <ul>
                 <li><a href="">HOME</a></li>
-                <li><a href="">CATALOG</a></li>
+                <li><a href="{{route('/financial')}}">$FINANCIALS</a></li>
                 <li><a href="{{route('/Showalloders')}}">MY ORDERS</a></li>
                 <li><a href="">SHOP</a></li>
-                <li><a href="">TOP10</a></li>
             </ul>
         </div>
         <div class="nav-2">

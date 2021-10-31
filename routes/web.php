@@ -38,7 +38,7 @@ Route::get('/fashionaddtocart/{id}', [productlist::class,'fashionaddtocart'])->m
 Route::get('/addtocarttwo/{id}', [productlist::class,'addtocarttwo'])->middleware('pageValidation');
 Route::get('/Cartdetails', [Orderpage::class, 'Cartdetails'])->name('/Cartdetails')->middleware('pageValidation');
 Route::get('/cartiteamdelet/{id}', [Orderpage::class, 'cartiteamdelete'])->name('/cartiteamdelet')->middleware('pageValidation');
-
+Route::get('/financial', [paymentmethod::class, 'financial'])->name('/financial')->middleware('pageValidation');
 
 Route::post('/Dashboard', [logingcontroller::class, 'loginform'])->name('/Dashboard');
 Route::post('/Registertion', [firstcontrollerpage::class, 'sigpupform'])->name('/Registertion');
