@@ -136,14 +136,22 @@ header.sticky
     outline: none;
     border: 2.5px solid rgb(40, 54, 78);
 }
-#result-search
+
+.results
 {
     position:absolute;
-    left: 20%;
-    top: 8vh;
+    left: 20.7%;
+    top: 11vh;
     width:850px;
     background-color: rgb(40, 54, 78);
-    border-radius: 5px;
+    border-radius: 1px;
+    z-index: 2;
+}
+.resultshow
+{
+    position:absolute;
+    left: 20.7%;
+    top: 6vh;
 }
 #result-search a
 {

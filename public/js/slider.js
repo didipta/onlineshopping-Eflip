@@ -70,9 +70,11 @@ repeat();
 window.addEventListener("scroll",function(){
     var header=document.querySelector("header");
     var head=document.querySelector('.header');
+    var result=document.querySelector('.results');
     var CATAGORIES=document.querySelector('.c-nav-2');
     header.classList.toggle("sticky", window.scrollY > 0 );
     head.classList.toggle("nonehead", window.scrollY > 0 );
+    result.classList.toggle("resultshow", window.scrollY > 0 );
     CATAGORIES.classList.toggle("CAT-nav", window.scrollY > 0 );
 });
 

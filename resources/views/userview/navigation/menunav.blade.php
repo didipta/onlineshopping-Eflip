@@ -54,7 +54,7 @@
             </div>
         </ul>
     </div>
-    <table id="result-search" ></table>
+    <table class="results"  id="result-search" ></table>
 </header>
 
 

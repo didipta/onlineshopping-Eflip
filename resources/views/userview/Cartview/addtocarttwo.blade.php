@@ -64,6 +64,8 @@
     </div>
 </div>
 </form>
+
+@include('userview.otherview.rating')
 @endsection
 @section("title")
 Online Shopping | {{$product->P_categories}} | {{$product->P_name}}
