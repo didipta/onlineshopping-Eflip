@@ -11,11 +11,10 @@
     <div class="order_details">
         <h1>{{$orderdetails->P_name}}</h1>
         <p>Price-{{$orderdetails->P_price}}</p>
-        <p>{{$orderdetails->P_categories}}</p>
+        <p style=" width: 190px;">{{$orderdetails->P_categories}}</p>
         <p>Quantity-{{$orderdetails->P_quantity}}</p>
         <p>Total-{{$orderdetails->P_tprice}}</p>
         <p>{{$orderdetails->P_size}}</p>
-        <p>{{$orderdetails->Paymanttype}}</p>
         
     </div>
     @endforeach
