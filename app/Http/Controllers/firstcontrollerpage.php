@@ -29,7 +29,7 @@ class firstcontrollerpage extends Controller
 
             'Firstname'=>'required|regex:/^[a-zA-Z]+$/u|max:20',
             'LastName'=>'required|regex:/^[a-zA-Z]+$/u|max:20',
-            'U_phone'=>'required|numeric|unique:systemusers|min:11',
+            'U_phone'=>'required|digits:11|numeric|unique:systemusers',
             'address'=>'required',
             'U_username'=>'required|max:10|unique:systemusers',
             'U_email'=>'required|email|unique:systemusers',
@@ -45,7 +45,7 @@ class firstcontrollerpage extends Controller
            'U_phone.required'=>'Please put your Phone number',
            'U_phone.unique'=>'Phone is alrealy exists',
            'U_phone.numeric'=>'Please put Number',
-           'U_phone.min'=>'Please put only 11 digits',
+           'U_phone.digits'=>'Please put only 11 digits',
            'address.required'=>'Please put your Address',
            'U_username.required'=>'Please put your username',
            'U_username.min'=>'username is only 10 character',
