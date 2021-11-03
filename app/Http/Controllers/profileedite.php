@@ -72,7 +72,10 @@ class profileedite extends Controller
        ]
        
        );
-
+        $file=$request->file('imgfile');
+        $filename=$request->file('imgfile')->getClientOriginalName();
+        $file->move('img',$filename);
+        
         $Systemuser =Systemuser::where('id',$request->id)->first();
         $Systemuser->U_profileimg=$request->file('imgfile')->getClientOriginalName();
         $Systemuser->save();
