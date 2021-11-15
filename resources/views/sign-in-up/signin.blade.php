@@ -35,7 +35,7 @@
                   {{csrf_field()}}
                     <div class="input-field">
                         <i class="fa fa-user-o" aria-hidden="true"></i>
-                        <input type="text" name="uname" id="uname" value="{{old('uname')}}" placeholder="user name"/>
+                        <input type="text" name="uname" id="uname" value="{{Cookie::get('username')}}" placeholder="user name"/>
                         
                     </div>
                     @error('uname')
@@ -45,7 +45,7 @@
                     
                     <div class="input-field">
                         <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-                        <input type="password" name="password" id="password" value="{{old('password')}}" placeholder="password"/>
+                        <input type="password" name="password" id="password" value="{{Cookie::get('Password')}}" placeholder="password"/>
         
                        <div class="eye" onclick=" password() "><i class="fa fa-eye" aria-hidden="true" id="eye" ></i></div> 
         

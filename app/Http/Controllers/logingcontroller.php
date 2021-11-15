@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Cookie;
 use App\Models\Product;
 use App\Models\Systemuser;
 use App\Models\Addtocart;
@@ -34,13 +35,17 @@ class logingcontroller extends Controller
         $Systemuser = Systemuser::select('*')->where('U_username',$userid)->where('U_password',$password)->first();
         $usertype=$Systemuser->Usertype;
         $user_name=$Systemuser->U_username;
+        $password=$Systemuser->U_password;
         
 
         if($usertype=="Customer")
         {   
             
             $request->session()->put('username', $user_name);
+            Cookie::queue('username',$user_name,time()+3600);
+            Cookie::queue('Password',$password,time()+3600);
             return redirect()->route('/Dashboardp');
+            
         }
         elseif($usertype=="Admin")
         {
