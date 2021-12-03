@@ -33,7 +33,8 @@
         
 
         <div class="item-card">
-        <input type="hidden" name="id" value="{{$product->id}}">
+
+           <input type="hidden" name="id" value="{{$product->id}}">
            <input type="hidden" name="user_name" value="{{$Systemuser->U_username}}">
            <input type="hidden" name="item_categories" value="{{$product->P_categories}}">
             <div class="item-title">
@@ -52,7 +53,7 @@
                     <option value="#252525" style="background-color: #252525 ;"></option>
                 </select>
                 </div>
-        </div>
+       </div>
 
         <div class="input">
             <h2></h2>
