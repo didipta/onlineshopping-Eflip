@@ -54,4 +54,31 @@ class Apiproductlist extends Controller
     }
 
 
+    public function Addtocart(Request $request)
+    {
+
+        $price=$request->item_price;
+        $quantity=$request->item_quantity;
+        $total=($quantity)*($price);
+        $var = new Addtocart();
+        $var->P_name= $request->iteam_name;
+        $var->P_price= $request->item_price;
+        $var->P_categories= $request->item_categories;
+        $var->P_quantity= $request->item_quantity;
+        $var->P_tprice=  $total;
+        $var->P_size=$request->item_size;
+        $var->U_username=$request->user_name;
+        $var->save();
+    }
+
+
+    public function Addtocartdetalis(Request $request)
+    {
+        $usernames=$request->id;
+        $addcart = Addtocart::where('U_username',$usernames)->get();
+        return $addcart;
+        
+    }
+
+
 }

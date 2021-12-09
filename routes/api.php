@@ -22,6 +22,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 /**productlist page  */
 Route::get('/productlist/{id}', [Apiproductlist::class,'productlist'])->middleware('Apivalidation');
 Route::get('/addtocarttwo/{id}', [Apiproductlist::class,'addtocarttwo'])->middleware('Apivalidation');
+
+/** addto card */
+Route::post('/Addtocart', [Apiproductlist::class,'Addtocart'])->middleware('Apivalidation');
+Route::get('/Addtocartdetalis/{id}', [Apiproductlist::class,'Addtocartdetalis']);
+
+/**live search */
 Route::get('/search', [Apiproductlist::class, 'search']);
 
 /*Signinpage & logout*/
