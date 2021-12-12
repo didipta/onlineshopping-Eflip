@@ -80,5 +80,44 @@ class Apiproductlist extends Controller
         
     }
 
+    public function cartiteamdelete(Request $request)
+    {
+       $id=$request->id;
+       $cartproduct = Addtocart::where('id',$id)->first();
+       $cartproduct->delete();
+       
+    }
+
+    public function Paymentadd(Request $request)
+    {
+        
+       $usernames=$request->username;
+       $addcart = Addtocart::select('*')->where('U_username',$usernames)->get();
+       $var = new Myorder();
+       $var->O_id= $request->orderid;
+       $var->user_id= $request->userid;
+       $var->U_username= $request->username;
+       $var->P_tprice= $request->totaleprice;
+       $var->O_status= "Your Order is processing";
+       $var->Paymanttype= $request->Paymenttype;
+       $var->save();
+
+       foreach($addcart as $addcart)
+          {
+              $orderdetail=new Orderdetail();
+              $orderdetail->order_id= $var->id;
+              $orderdetail->P_name= $addcart->P_name;
+              $orderdetail->P_price= $addcart->P_price;
+              $orderdetail->P_categories= $addcart->P_categories;
+              $orderdetail->P_quantity= $addcart->P_quantity;
+              $orderdetail->P_tprice= $addcart->P_tprice;
+              $orderdetail->P_size= $addcart->P_size;
+              $orderdetail->U_username= $addcart->U_username;
+              $orderdetail->save();
+              $addcart->delete();
+          }
+    }
+
+
 
 }

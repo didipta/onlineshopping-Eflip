@@ -22,6 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 /**productlist page  */
 Route::get('/productlist/{id}', [Apiproductlist::class,'productlist'])->middleware('Apivalidation');
 Route::get('/addtocarttwo/{id}', [Apiproductlist::class,'addtocarttwo'])->middleware('Apivalidation');
+Route::get('/cartiteamdelet/{id}', [Apiproductlist::class, 'cartiteamdelete']);
 
 /** addto card */
 Route::post('/Addtocart', [Apiproductlist::class,'Addtocart'])->middleware('Apivalidation');
@@ -42,3 +43,8 @@ Route::post('/Changepassword', [Apiprofile::class,'Changepassword']);
 /**oders view */
 Route::get('/Showalloders/{usename}', [Apiproductlist::class, 'Showalloders'])->middleware('Apivalidation');
 Route::get('/Showallodersdetails/{id}', [Apiproductlist::class, 'Showallodersdetails'])->middleware('Apivalidation');
+
+
+/** payment methoed */
+
+Route::post('/Paymentadd', [Apiproductlist::class, 'Paymentadd']);
