@@ -118,6 +118,11 @@ class Apiproductlist extends Controller
           }
     }
 
-
+    public function financial(Request $request)
+    {
+        $usernames=$request->usename;
+        $Myorder = Myorder::select('*')->where('U_username',$usernames)->orderby('id','desc')->get();
+        return $Myorder;
+    }
 
 }

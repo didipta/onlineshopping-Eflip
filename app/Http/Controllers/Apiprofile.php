@@ -58,4 +58,12 @@ class Apiprofile extends Controller
         $Systemuser->U_password=$request->newpassword;
         $Systemuser->save();
     }
+
+    public function profileimg(Request $request)
+    {
+        $Systemuser =Systemuser::where('id',$request->id)->first();
+        $Systemuser->U_profileimg=$request->imgfile;;
+        $Systemuser->save();
+        
+    }
 }
