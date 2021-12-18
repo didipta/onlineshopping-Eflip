@@ -53,11 +53,6 @@ Route::get('/financial/{usename}', [Apiproductlist::class, 'financial']);
 
 Route::post('/Paymentadd', [Apiproductlist::class, 'Paymentadd']);
 
-
-
-
-
-
 //////Stafff Api///////////
 
 Route::post('/addproduct',[staffapicontroller::class,'add']);
