@@ -25,6 +25,8 @@ class Apiprofile extends Controller
 
     public function sigpupform(Request $request)
     {
+
+       
        $var = new Systemuser();
        $var->U_Name= $request->Firstname." ".$request->LastName;
        $var->U_phone= $request->U_phone;
